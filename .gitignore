@@ -1,0 +1,41 @@
+# .gitignore
+# Виртуальное окружение
+venv/
+.env
+.env.local
+
+# Базы данных и хранилища
+*.db
+*.sqlite3
+storage/*.db
+storage/whoosh_index/
+
+# Кэши и логи
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+logs/
+
+# Модели ML (можно добавить позже)
+models/
+*.joblib
+*.pkl
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Временные файлы
+tmp/
+temp/
