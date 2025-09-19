@@ -19,22 +19,29 @@
 - **База данных**: SQLite
 - **Обработка языка**: Natasha, Levenshtein
 
-## ⚡ Быстрый старт
+## 🚀 Быстрый старт
 
+### Автоматическая установка:
 ```bash
-# Клонирование репозитория
-git clone https://github.com/YOUR_USERNAME/smart-portal-search.git
+git clone https://github.com/ваш-username/smart-portal-search.git
 cd smart-portal-search
+chmod +x setup.sh
+./setup.sh
+```
 
-# Создание виртуального окружения
+### Ручная установка:
+```bash
+git clone https://github.com/ваш-username/smart-portal-search.git
+cd smart-portal-search
 python -m venv venv
-source venv/bin/activate
-
-# Установка зависимостей
+source venv/bin/activate  # Linux/macOS
+# или .\venv\Scripts\activate  # Windows
 pip install -r requirements.txt
-
-# Загрузка NLP зависимостей
 python download_dependencies.py
+uvicorn app.main:app --reload
+```
 
-# Запуск сервера
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+### Доступные endpoints:
+- 📄 API Docs: http://localhost:8000/docs
+- 🌐 Web UI: http://localhost:8000/ui
+- 🩺 Health: http://localhost:8000/api/health
