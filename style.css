@@ -1,0 +1,102 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    background-color: #E7EEF7;
+}
+#main-wrapper {
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+    flex-direction: row;
+}
+#user-prompt{
+    position: relative;
+    bottom: 0;
+    width: calc(70vw - 40px);
+    height: calc(10vh - 40px);
+    border-radius: 20px;
+    padding:20px;
+    border: 1px solid black;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+#set-query {
+    position: relative;
+    bottom: 0;
+    color: #1A1A1A;
+    padding:25px;
+    border: 1px solid rgba(128,128,128,1);
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(219,43,33);
+    transition: 0.2s transform ease, 0.2s background-color ease, 0.2s color ease;
+}
+#set-query:active {
+    transform: scale(0.96);
+}
+#set-query:disabled {
+    cursor: not-allowed;
+    background-color: rgb(122, 22, 18);
+}
+#set-query:hover {
+    background-color: #1A1A1A;
+}
+.modal {
+    opacity: 0;
+    z-index: 99999;
+    width:100%;
+    left:0;
+    top:0;
+    position: fixed;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s opacity ease;
+}
+.buying-form {
+    position: relative;
+    width:400px;
+    height:400px;
+    text-align: center;
+    background-color: white;
+    border-radius: 40px;
+    transition: 0.2s opacity ease;
+}
+.close-icon-button {
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    background-image: url("./images/close.png");
+    width:50px;
+    display: block;
+    height: 50px;
+    position: absolute;
+    right:10px;
+    top:10px;
+    border-radius: 50%;
+}
+.close-icon-button:active {
+    transform: scale(0.96);
+}
+.help-message {
+    padding: 40px;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    left:-100%;
+    max-width: 50vw;
+    font-size:24px;
+    transition: 0.25s left ease, 0.25s transform ease;
+    overflow-wrap: break-word;
+}
